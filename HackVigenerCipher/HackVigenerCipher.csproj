@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PVigenerCipher\PVigenerCipher.csproj" />
+  </ItemGroup>
+  
+<ItemGroup>
+    <None Remove="open-folder.png" />
+    <None Remove="save.png" />
+  </ItemGroup>
+  
+<ItemGroup>
+  <COMReference Include="MMC20">
+    <WrapperTool>tlbimp</WrapperTool>
+    <VersionMinor>0</VersionMinor>
+    <VersionMajor>1</VersionMajor>
+    <Guid>8e80422b-cac4-472b-b272-9635f1dfef3b</Guid>
+    <Lcid>0</Lcid>
+    <Isolated>false</Isolated>
+    <EmbedInteropTypes>true</EmbedInteropTypes>
+  </COMReference>
+</ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="open-folder.png" />
+    <Resource Include="save.png" />
+  </ItemGroup>
+
+</Project>
